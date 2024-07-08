@@ -1,19 +1,19 @@
-# Langchain RAG 
+# Langchain RAG
 
 This repository is a modified version of the [Langchain RAG Tutorial](https://github.com/pixegami/langchain-rag-tutorial). It utilizes Hugging Face's `meta-llama/Meta-Llama-3-8B-Instruct` model and `HuggingFaceEmbeddings` with `bert-base-uncased` for document and query embeddings.
 
-## Install dependencies
+## Install Dependencies
 
-1. **MacOS users:** Due to current challenges installing `onnxruntime` through `pip install onnxruntime`, use the following workaround:
+1. **MacOS Users:** Due to current challenges installing `onnxruntime` through `pip install onnxruntime`, use the following workaround:
 
     ```sh
     conda install onnxruntime -c conda-forge
     ```
     Refer to this [thread](https://github.com/microsoft/onnxruntime/issues/11037) for additional help if needed.
 
-2. **Windows users:** Follow the guide [here](https://github.com/bycloudai/InstallVSBuildToolsWindows?tab=readme-ov-file) to install the Microsoft C++ Build Tools. Ensure you follow through to the last step to set the environment variable path.
+2. **Windows Users:** Follow the guide [here](https://github.com/bycloudai/InstallVSBuildToolsWindows?tab=readme-ov-file) to install the Microsoft C++ Build Tools. Ensure you follow through to the last step to set the environment variable path.
 
-3. Now, run this command to install dependencies from the `requirements.txt` file:
+3. Install dependencies from the `requirements.txt` file:
 
     ```sh
     pip install -r requirements.txt
@@ -25,16 +25,20 @@ This repository is a modified version of the [Langchain RAG Tutorial](https://gi
     pip install "unstructured[md]"
     ```
 
-## Create database
+## Create and Query Database
 
-Create the Chroma DB:
+1. **Create the Chroma DB:**
 
-```sh
-python create_database.py
-'''
+    ```sh
+    python create_database.py
+    ```
 
-## Query database
+2. **Query the Chroma DB:**
 
+    ```sh
+    python query_data.py "How does Alice meet the Mad Hatter?"
+    ```
 
-python query_data.py "How does Alice meet the Mad Hatter?"
+> Ensure you have set up a Hugging Face account and configured your Hugging Face API key in your environment variables for this to work.
 
+For a detailed step-by-step tutorial, watch this video: [RAG+Langchain Python Project: Easy AI/Chat For Your Docs](https://www.youtube.com/watch?v=tcqEUSNCn8I&ab_channel=pixegami).
