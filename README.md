@@ -1,10 +1,10 @@
 # Langchain RAG
 
-This repository is a modified version of the [Langchain RAG Tutorial](https://github.com/pixegami/langchain-rag-tutorial). It utilizes Hugging Face's `meta-llama/Meta-Llama-3-8B-Instruct` model and `HuggingFaceEmbeddings` with `bert-base-uncased` for document and query embeddings.
+This repository is a modified version of the [Langchain RAG Tutorial](https://github.com/pixegami/langchain-rag-tutorial). It utilizes Hugging Face's `meta-llama/Meta-Llama-3-8B-Instruct` model and `HuggingFaceEmbeddings` with `bert-base-uncased` for document and query embeddings.The repository was run on Ubuntu 22.04.
 
 ## Install Dependencies
 
-1. **MacOS Users:** Due to current challenges installing `onnxruntime` through `pip install onnxruntime`, use the following workaround:
+1. **MacOS / Linux Users:** Due to current challenges installing `onnxruntime` through `pip install onnxruntime`, use the following workaround:
 
     ```sh
     conda install onnxruntime -c conda-forge
